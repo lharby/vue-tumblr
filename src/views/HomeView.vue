@@ -9,15 +9,15 @@ import CardElement from '../components/card/CardElement.vue';
 
 let postItems = ref([]);
 
+const url = new URL(`https://${apiURL}${blogURL}/posts?limit=50`);
+url.searchParams.set('api_key', apiKey );
+
 const options = {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json'
     }
 };
-
-const url = new URL(`https://${apiURL}${blogURL}/posts?limit=50`);
-url.searchParams.set('api_key', apiKey );
 
 onMounted(() => {
   fetch(url, options)
@@ -36,7 +36,7 @@ onMounted(() => {
   <main>
     <div class="home">
       <p>This is the home page</p>
-      <CardElement :items="postItems" v-if="postItems.length"/>
+      <CardElement :items="postItems" v-if="postItems.length" />
       <div v-else>
         No posts to display  
       </div>

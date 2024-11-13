@@ -1,22 +1,13 @@
+<script setup>
+const meta = import.meta.env;
+const title = meta.VITE_TITLE
+</script>
 
 <template>
     <div class="footer"> 
         <p>{{ title }}</p>
     </div>
 </template>
-    
-<script>
-const meta = import.meta.env;
-
-export default {
-    name: 'EnvironmentComponent',
-    data() {
-        return {
-            title: meta.VITE_TITLE
-        };
-    }
-};
-</script>
 
 <style scoped lang="scss">
     .footer {
