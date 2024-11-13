@@ -28,6 +28,7 @@ export default {
         background-color: #333;
         color: white;
         z-index: 1;
+        font-size: 0.75rem;
 
         p {
             font-family: monospace;
