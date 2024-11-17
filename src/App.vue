@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import EnvironmentComponent from './components/environment/EnvironmentComponent.vue';
+import ModalElement from './components/modal/ModalElement.vue';
+
 console.log(EnvironmentComponent);
 </script>
 
@@ -16,6 +18,7 @@ console.log(EnvironmentComponent);
   </header>
 
   <RouterView />
+  <ModalElement />
 </template>
 
 <style scoped lang="scss">

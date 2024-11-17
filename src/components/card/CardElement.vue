@@ -1,5 +1,11 @@
 <script setup>
+
 const props = defineProps(['items'])
+
+// const handleModalOpen = (event) => {
+//     return console.log(props, event)
+// };
+
 </script>
 
 <template>
